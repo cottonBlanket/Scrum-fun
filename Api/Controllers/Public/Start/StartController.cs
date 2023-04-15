@@ -32,7 +32,7 @@ public class StartController: BasePublicController
         var modes = _modeManager.GetAll().Where(x => model.ModeNames.Contains(x.Name)).ToList();
         room.Modes = modes;
         var roomId = await _roomManager.InsertAsync(room);
-        var user = new UserDal(model.UserName, roomId);
+        var user = new UserDal(model.UserName, room);
         var userId = await _userManager.InsertAsync(user);
         var uri = new Uri($"{Request.Scheme}://{Request.Host}/room/invite/{password}");
         var response = new CreateRoomResponse(room.Name, roomId, userId, uri);
@@ -42,19 +42,15 @@ public class StartController: BasePublicController
     [HttpPost("invite/")]
     public async Task<IActionResult> Invite([FromBody] InviteRequest model)
     {
-        var user = new UserDal(model.UserName, model.RoomId);
+        var room = await _roomManager.GetAsync(model.RoomId);
+        var user = new UserDal(model.UserName, room);
         var userId = await _userManager.InsertAsync(user);
-        var room = _roomManager.GetAll().FirstOrDefault(x => x.Password == model.RoomId);
-        if (room == null)
-            return NotFound();
-        var us = await _userManager.GetAsync(userId);
         
-        _roomManager.UpdateAsync(room);
         return Ok(new InviteResponse(userId));
     }
 
     [HttpGet("modes")]
-    public IActionResult GetAllModes()
+    public IActionResult GetAllModes(Guid id)
     {
         return Ok(_modeManager.GetAll());
     }

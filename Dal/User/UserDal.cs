@@ -7,15 +7,14 @@ public class UserDal: BaseDal<Guid>
 {
     public string Name { get; set; }
     
-    public int RoomId { get; set; }
-    
+    public RoomDal Room { get; set; }
     
     public string? Path { get; set; }
 
-    public UserDal(string name, int roomId)
+    public UserDal(string name, RoomDal roomId)
     {
         Name = name;
-        RoomId = roomId;
+        Room = roomId;
         Path = "1";
     }
 
