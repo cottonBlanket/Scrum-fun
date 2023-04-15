@@ -30,8 +30,8 @@ public class StartController: BasePublicController
     {
         var room = _mapper.Map<RoomDal>(model);
         var roomId = await _roomManager.InsertAsync(room);
-        Directory.CreateDirectory($"../../../../Logic/Room/Files/{roomId}");
-        var user = new UserDal(model.UserName, room, true, null, null);
+        Directory.CreateDirectory($"../Logic/Managers/Room/Files/{roomId}");
+        var user = new UserDal(model.UserName, room, true);
         var userId = await _userManager.InsertAsync(user);
         var response = new CreateRoomResponse(roomId, userId);
         return Ok(response);
@@ -41,7 +41,7 @@ public class StartController: BasePublicController
     public async Task<IActionResult> Invite([FromBody] InviteRequest model)
     {
         var room = await _roomManager.GetAsync(model.RoomId);
-        var user = new UserDal(model.UserName, room, false, null, null);
+        var user = new UserDal(model.UserName, room);
         var userId = await _userManager.InsertAsync(user);
         
         return Ok(new InviteResponse(userId));
@@ -53,4 +53,7 @@ public class StartController: BasePublicController
         await _userManager.DeleteAsync(UserId);
         return Ok();
     }
+    
+    
+    
 }

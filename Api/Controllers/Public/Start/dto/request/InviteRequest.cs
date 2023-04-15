@@ -7,7 +7,7 @@ public class InviteRequest
 {
     [Required]
     [JsonProperty("RoomId")]
-    public required int RoomId { get; init; }
+    public required string RoomId { get; init; }
 
     [Required]
     [JsonProperty("UserName")]

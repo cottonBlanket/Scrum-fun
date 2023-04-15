@@ -2,10 +2,10 @@
 
 public class CreateRoomResponse
 {
-    public int RoomId { get; init; }
+    public string RoomId { get; init; }
     public Guid UserId { get; init; }
 
-    public CreateRoomResponse(int roomId, Guid userId)
+    public CreateRoomResponse(string roomId, Guid userId)
     {
         RoomId = roomId;
         UserId = userId;
