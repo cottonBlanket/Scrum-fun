@@ -3,7 +3,7 @@ using Dal.Room;
 
 namespace Logic.Managers.Room.Interfaces;
 
-public interface IRoomManager: IBaseRepository<RoomDal, int>
+public interface IRoomManager: IBaseRepository<RoomDal, string>
 {
-    // public int GeneratePassword();
+    public string GenerateId();
 }

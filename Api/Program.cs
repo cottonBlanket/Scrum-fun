@@ -1,4 +1,3 @@
-
 using Dal;
 using Logic.Managers.Room;
 using Logic.Managers.Room.Interfaces;
@@ -21,8 +20,6 @@ builder.Services.AddScoped<IUserManager, UserManager>();
 //комната
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IRoomManager, RoomManager>();
-//автомаппер
-
 
 //сваггер
 builder.Services.AddSwaggerGen();
