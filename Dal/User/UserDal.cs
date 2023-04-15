@@ -7,11 +7,15 @@ public class UserDal: BaseDal<Guid>
 {
     public string Name { get; set; }
     
-    public RoomDal RoomId { get; set; }
+    public int RoomId { get; set; }
 
-    public UserDal(string name, RoomDal roomId)
+    public UserDal()
+    {
+        
+    }
+    public UserDal(string name, int room)
     {
         Name = name;
-        RoomId = roomId;
+        RoomId = room;
     }
 }

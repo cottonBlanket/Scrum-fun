@@ -16,10 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\Public\Start\dto\response" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Dal\Dal.csproj" />
       <ProjectReference Include="..\Logic\Logic.csproj" />
     </ItemGroup>

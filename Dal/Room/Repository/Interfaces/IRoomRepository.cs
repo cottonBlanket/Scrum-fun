@@ -3,7 +3,7 @@ using Dal.Room;
 
 namespace Logic.Managers.Room.Interfaces;
 
-public interface IRoomRepository : IBaseRepository<RoomDal, Guid>
+public interface IRoomRepository : IBaseRepository<RoomDal, int>
 {
     
 }

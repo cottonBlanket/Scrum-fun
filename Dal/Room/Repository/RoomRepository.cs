@@ -5,7 +5,7 @@ using Logic.Managers.Room.Interfaces;
 
 namespace Logic.Managers.Room;
 
-public class RoomRepository : BaseRepository<RoomDal, Guid>, IRoomRepository
+public class RoomRepository : BaseRepository<RoomDal, int>, IRoomRepository
 {
     public RoomRepository(DataContext context): base(context)
     {
