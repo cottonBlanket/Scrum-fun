@@ -1,0 +1,6 @@
+appsettings.json
+appsettings.Development.json
+../Dal/appsettings.json
+../Dal/appsettings.Development.json
+../Logic/appsettings.json
+../Logic/appsettings.Development.json
