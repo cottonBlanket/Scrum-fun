@@ -50,7 +50,7 @@ public class StartController: BasePublicController
     }
 
     [HttpGet("modes")]
-    public IActionResult GetAllModes(Guid id)
+    public IActionResult GetAllModes()
     {
         return Ok(_modeManager.GetAll());
     }
