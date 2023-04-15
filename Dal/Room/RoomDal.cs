@@ -8,7 +8,6 @@ public class RoomDal: BaseDal<int>
 {
     public string Name { get; set; }
     public string Modes { get; set; }
-    
     public int GroupCount { get; set; }
     
     public Status Status { get; set; }
@@ -19,4 +18,5 @@ public class RoomDal: BaseDal<int>
     {
         
     }
+    
 }

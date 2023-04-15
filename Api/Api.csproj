@@ -20,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Controllers\Internal" />
       <Folder Include="Controllers\Public\Music\dto\Response" />
       <Folder Include="Controllers\Public\Start\dto\response" />
     </ItemGroup>

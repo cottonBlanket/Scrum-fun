@@ -19,7 +19,6 @@ public class MusicController : BasePublicController
    [HttpPost("add/{userId:guid}")]
    public async Task<IActionResult> UploadFile([FromRoute]Guid userId, IFormFile file)
    {
-      await _userManager.UploadFileAsync(userId, file);
       return Ok();
    }
    

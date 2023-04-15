@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Managers\Room\Files" />
       <Folder Include="Managers\User\Files" />
     </ItemGroup>
 

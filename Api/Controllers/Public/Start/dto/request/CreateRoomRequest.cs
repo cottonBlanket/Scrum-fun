@@ -15,6 +15,10 @@ public class CreateRoomRequest
     public required string Name { get; init; }
     
     [Required]
-    [JsonProperty("ModeNames")]
-    public List<string> ModeNames { get; init; }
+    [JsonProperty("GroupCount")]
+    public required int GroupCount { get; init; }
+    
+    [Required]
+    [JsonProperty("Modes")]
+    public required string Modes { get; init; }
 }

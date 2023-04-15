@@ -14,4 +14,9 @@ public class UserDal: BaseDal<Guid>
     public GroupDal? Group { get; set; }
     
     public string? QuotePiece { get; set; }
+
+    public UserDal(string name, RoomDal room, bool isOwner, GroupDal groupDal, string quotePiece)
+    {
+        
+    }
 }
