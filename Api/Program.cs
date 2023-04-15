@@ -1,4 +1,3 @@
-using Api.Controllers.Internal.Modes.Mapping;
 using Dal;
 using Logic.Managers.Room;
 using Logic.Managers.Room.Interfaces;
@@ -21,8 +20,6 @@ builder.Services.AddScoped<IUserManager, UserManager>();
 //комната
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IRoomManager, RoomManager>();
-//автомаппер
-builder.Services.AddAutoMapper(typeof(CreateModeProfile));
 
 //сваггер
 builder.Services.AddSwaggerGen();
