@@ -22,6 +22,7 @@
     <ItemGroup>
       <Folder Include="Controllers\Internal\Exercise" />
       <Folder Include="Controllers\Internal\Modes\dto\response" />
+      <Folder Include="Controllers\Internal\Modes\mapping" />
       <Folder Include="Controllers\Public\Music\dto\Response" />
       <Folder Include="Controllers\Public\Start\dto\response" />
     </ItemGroup>

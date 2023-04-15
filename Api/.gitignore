@@ -7,7 +7,7 @@ appsettings.Development.json
 
 /bin
 /obj
-../Dal/obj
-../Dal/bin
-../Logic/obj
-../Logic/bin
+../Dal/obj/
+../Dal/bin/
+../Logic/obj/
+../Logic/bin/
