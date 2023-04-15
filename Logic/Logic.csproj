@@ -7,13 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Managers\Exercise" />
-      <Folder Include="Managers\Mode" />
-      <Folder Include="Managers\Room" />
-      <Folder Include="Managers\User" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Dal\Dal.csproj" />
     </ItemGroup>
 

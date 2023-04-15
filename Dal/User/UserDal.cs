@@ -8,4 +8,10 @@ public class UserDal: BaseDal<Guid>
     public string Name { get; set; }
     
     public RoomDal RoomId { get; set; }
+
+    public UserDal(string name, RoomDal roomId)
+    {
+        Name = name;
+        RoomId = roomId;
+    }
 }
