@@ -48,7 +48,7 @@ public class StartController: BasePublicController
         if (room == null)
             return NotFound();
         var us = await _userManager.GetAsync(userId);
-        room.Users.Add(us);
+        
         _roomManager.UpdateAsync(room);
         return Ok(new InviteResponse(userId));
     }
