@@ -7,11 +7,20 @@ public class UserDal: BaseDal<Guid>
 {
     public string Name { get; set; }
     
-    public RoomDal RoomId { get; set; }
+    public int RoomId { get; set; }
+    
+    
+    public string Path { get; set; }
 
-    public UserDal(string name, RoomDal roomId)
+    public UserDal(string name, int roomId, string path)
     {
         Name = name;
         RoomId = roomId;
+        Path = path;
+    }
+
+    public UserDal()
+    {
+        
     }
 }

@@ -13,6 +13,7 @@ public class DataContext: DbContext
     public DbSet<ModeDal> Mode { get; set; }
     public DbSet<ExerciseDal> Exercise { get; set; }
     
+    
     public DataContext(DbContextOptions<DataContext> options)
         : base(options)
     {

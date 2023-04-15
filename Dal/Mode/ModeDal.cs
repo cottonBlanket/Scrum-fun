@@ -9,5 +9,7 @@ public class ModeDal: BaseDal<int>
     
     public int Time { get; set; }
     
+    public string Description { get; set; }
+    
     public List<ExerciseDal> Exercises { get; set; }
 }
