@@ -4,3 +4,10 @@ appsettings.Development.json
 ../Dal/appsettings.Development.json
 ../Logic/appsettings.json
 ../Logic/appsettings.Development.json
+
+/bin
+/obj
+../Dal/obj/
+../Dal/bin/
+../Logic/obj/
+../Logic/bin/

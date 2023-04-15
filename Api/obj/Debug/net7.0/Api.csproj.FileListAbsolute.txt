@@ -17,15 +17,6 @@ C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Npgsql.dll
@@ -58,3 +49,8 @@ C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\obj\Debug\net7.0\Api.pdb
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\obj\Debug\net7.0\Api.genruntimeconfig.cache
 C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\obj\Debug\net7.0\ref\Api.dll
+C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Humanizer.dll
+C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\79373\OneDrive\Рабочий стол\USSC-project-main\USSC\Scrum-fun\Api\bin\Debug\net7.0\System.CodeDom.dll

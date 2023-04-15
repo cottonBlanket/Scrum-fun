@@ -12,11 +12,10 @@ public class UserDal: BaseDal<Guid>
     
     public string Path { get; set; }
 
-    public UserDal(string name, int roomId, string path)
+    public UserDal(string name, int roomId)
     {
         Name = name;
         RoomId = roomId;
-        Path = path;
     }
 
     public UserDal()

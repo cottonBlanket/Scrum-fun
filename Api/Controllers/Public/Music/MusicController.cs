@@ -16,8 +16,8 @@ public class MusicController : BasePublicController
    {
       _userManager = userManager;
    }
-   [HttpPut("addFile")]
-   public async Task<IActionResult> AddFile(IFormFile file, Guid userId)
+   [HttpPost("addMusic")]
+   public async Task<IActionResult> AddMusic(IFormFile file, Guid userId)
    { 
       var uploadPath = $"../../../../Logic/MP3\\{userId}.mp3";
       var user = await _userManager.GetAsync(userId);
@@ -44,7 +44,7 @@ public class MusicController : BasePublicController
    }
 
    [HttpPut("UpdateMusic")]
-   public async Task<IActionResult> UpdateDirection(MusicModelRequest model)
+   public async Task<IActionResult> Update(MusicModelRequest model)
    {
       var user = await _userManager.GetAsync(model.Id);
       user.Path = model.Path;
@@ -53,7 +53,7 @@ public class MusicController : BasePublicController
    }
     
    [HttpDelete("Delete")]
-   public async Task<IActionResult> DeleteDirection(Guid userId)
+   public async Task<IActionResult> Delete(Guid userId)
    {
       var user = await _userManager.GetAsync(userId);
       user.Path = "";
