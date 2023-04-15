@@ -1,3 +1,5 @@
+using Api.Controllers.Public.Room.Mapping;
+using Api.Controllers.Public.Start.Mapping;
 using Dal;
 using Logic.Managers.Room;
 using Logic.Managers.Room.Interfaces;
@@ -20,7 +22,8 @@ builder.Services.AddScoped<IUserManager, UserManager>();
 //комната
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IRoomManager, RoomManager>();
-
+builder.Services.AddAutoMapper(typeof(CreateRoomProfile));
+builder.Services.AddAutoMapper(typeof(UserResponseProfile));
 //сваггер
 builder.Services.AddSwaggerGen();
 

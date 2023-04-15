@@ -1,6 +1,4 @@
 ﻿using Api.Controllers.Base;
-using Api.Controllers.Public.Music.dto;
-using Dal;
 using Logic.Managers.User.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,13 +25,13 @@ public class MusicController : BasePublicController
    [HttpGet("record/{roomId}")]
    public async Task<IActionResult> GetRecord([FromRoute] string roomId)
    {
-      var files = new DirectoryInfo($"../Logic/Managers/User/Files/{roomId}/").GetFiles();
-      // foreach (var VARIABLE in )
-      // {
-      //    
-      // }
-      return Ok();
+      var path = $"../Logic/Managers/Room/Files/{roomId}";
+      var directory = new DirectoryInfo(path);
+      var files = directory.GetFiles().Select(x => Path.Combine(x.DirectoryName, x.Name)).ToList();
+      System.IO.File.WriteAllBytes(Path.Combine(path, "record.mp3"),
+         files.SelectMany(x => System.IO.File.ReadAllBytes(x)).ToArray());
+      var fileType = "application/octet-stream";
+      var fileStream = new FileStream(Path.Combine(path, "record.mp3"), FileMode.Open);
+      return File(fileStream, fileType, "record.mp3");
    }
-
-
 }

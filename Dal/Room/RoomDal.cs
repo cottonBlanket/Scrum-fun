@@ -23,6 +23,7 @@ public class RoomDal: BaseDal<string>
 
     public RoomDal(string name, int groupCount, string modes)
     {
+        Id = GetRandomString();
         Name = name;
         GroupCount = groupCount;
         var modesArray = modes.Split(' ');
@@ -51,5 +52,13 @@ public class RoomDal: BaseDal<string>
         var statuses = Modes.Split(' ').Select(int.Parse).ToList();
         var cur = statuses.IndexOf((int)Status);
         Status = (Status)statuses[cur + 1];
+    }
+    
+    public string GetRandomString()
+    {
+        var random = new Random();
+        string id = new string(Enumerable.Repeat("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 9)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
+        return id;
     }
 }

@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Dal.Migrations
 {
     /// <inheritdoc />
-    public partial class Cr1 : Migration
+    public partial class Init1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,8 +29,7 @@ namespace Dal.Migrations
                 name: "Room",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Id = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Modes = table.Column<string>(type: "text", nullable: false),
                     GroupCount = table.Column<int>(type: "integer", nullable: false),
@@ -47,7 +46,7 @@ namespace Dal.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    RoomId = table.Column<int>(type: "integer", nullable: false),
+                    RoomId = table.Column<string>(type: "text", nullable: false),
                     IsOwner = table.Column<bool>(type: "boolean", nullable: false),
                     GroupId = table.Column<int>(type: "integer", nullable: true),
                     QuotePiece = table.Column<string>(type: "text", nullable: true)
