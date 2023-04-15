@@ -101,7 +101,6 @@ namespace Dal.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Path")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int?>("RoomDalId")

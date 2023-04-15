@@ -44,10 +44,12 @@ public class StartController: BasePublicController
     {
         var user = new UserDal(model.UserName, model.RoomId);
         var userId = await _userManager.InsertAsync(user);
-        var room = await _roomManager.GetAsync(model.RoomId);
+        var room = _roomManager.GetAll().FirstOrDefault(x => x.Password == model.RoomId);
         if (room == null)
             return NotFound();
-        room.Users.Add(await _userManager.GetAsync(userId));
+        var us = await _userManager.GetAsync(userId);
+        room.Users.Add(us);
+        _roomManager.UpdateAsync(room);
         return Ok(new InviteResponse(userId));
     }
 

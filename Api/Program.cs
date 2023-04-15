@@ -1,3 +1,4 @@
+using Api.Controllers.Internal.Modes.Mapping;
 using Dal;
 using Logic.Managers.Exercise;
 using Logic.Managers.Exercise.Interfaces;
@@ -30,6 +31,8 @@ builder.Services.AddScoped<IModeManager, ModeManager>();
 //задание
 builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
 builder.Services.AddScoped<IExerciseManager, ExerciseManager>();
+//автомаппер
+builder.Services.AddAutoMapper(typeof(CreateModeProfile));
 
 //сваггер
 builder.Services.AddSwaggerGen();
