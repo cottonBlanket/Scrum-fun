@@ -1,6 +1,7 @@
 ﻿using Api.Controllers.Base;
 using Api.Controllers.Public.Room.dto.response;
 using AutoMapper;
+using Dal.User;
 using Logic.Managers.Room.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -36,16 +37,13 @@ public class RoomController: BasePublicController
     }
 
     [HttpGet("{roomId}")]
-    public async Task<IActionResult> GetRoom([FromRoute] string roomId, [FromBody] UserResponse model)
+    public async Task<IActionResult> GetRoom([FromRoute] string roomId)
     {
         var room = await _roomManager.GetAsync(roomId);
 
+        /*var user = _mapper.Map<UserDal>(new UserResponse(room.Users.));
         
-        var r = new List<GetListUsersInRoomResponse>();
-        var users = room.Users;
-        foreach (var user in users)
-        {
-        }
+        var result = new GetListUsersInRoomResponse(room.Name, )*/
 
         return Ok();
     }

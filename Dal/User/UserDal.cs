@@ -21,4 +21,9 @@ public class UserDal: BaseDal<Guid>
         Room = room;
         IsOwner = isOwner;
     }
+
+    public UserDal()
+    {
+        
+    }
 }
