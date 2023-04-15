@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "n/zI6DVLrSGApklPbHB6i19xQhRIqDUg+69bltrnuRw=",
+  "Hash": "XArv3VFSuVWuTIpbtWalf90xP5I2xDRsVyL38y6bDDc=",
   "Source": "Logic",
   "BasePath": "_content/Logic",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj",
+      "Identity": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj",
       "Version": 2,
       "Source": "Dal",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

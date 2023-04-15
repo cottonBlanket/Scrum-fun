@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "UjgOtH10al49z9DNx0Z9X+E2TxNqEZ+TJDHkq9nW/ZY=",
+  "Hash": "bVcdZPCkOtz/sAsA4Kq1dimAqEtshbafOnUgNU2P780=",
   "Source": "Api",
   "BasePath": "_content/Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj",
+      "Identity": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj",
       "Version": 2,
       "Source": "Dal",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -18,7 +18,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     },
     {
-      "Identity": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj",
+      "Identity": "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj",
       "Version": 2,
       "Source": "Logic",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
