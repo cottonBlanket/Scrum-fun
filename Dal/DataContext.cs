@@ -6,16 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dal;
 
-public sealed class DataContext: DbContext
+public class DataContext: DbContext
 {
     public DbSet<UserDal> User { get; set; }
     public DbSet<RoomDal> Room { get; set; }
     public DbSet<ModeDal> Mode { get; set; }
     public DbSet<ExerciseDal> Exercise { get; set; }
     
-    public DataContext()
-    {
-    }
     
     public DataContext(DbContextOptions<DataContext> options)
         : base(options)

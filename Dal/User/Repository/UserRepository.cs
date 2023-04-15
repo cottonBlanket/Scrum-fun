@@ -11,4 +11,6 @@ public class UserRepository: BaseRepository<UserDal, Guid>, IUserRepository
     {
         
     }
+    
+    
 }
