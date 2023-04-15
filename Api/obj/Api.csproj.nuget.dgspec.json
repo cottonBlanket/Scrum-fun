@@ -1,36 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Api\\Api.csproj": {}
+    "D:\\git\\Rider\\Scrum-fun\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Api\\Api.csproj": {
+    "D:\\git\\Rider\\Scrum-fun\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Api\\Api.csproj",
+        "projectUniqueName": "D:\\git\\Rider\\Scrum-fun\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\79373\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Api\\obj\\",
+        "projectPath": "D:\\git\\Rider\\Scrum-fun\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\Rider\\Scrum-fun\\Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\79373\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj": {
-                "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj"
+              "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj": {
+                "projectPath": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj"
               },
-              "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj"
+              "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj": {
+                "projectPath": "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj"
               }
             }
           }
@@ -95,26 +101,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj": {
+    "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj",
+        "projectUniqueName": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj",
-        "packagesPath": "C:\\Users\\79373\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\obj\\",
+        "projectPath": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\Rider\\Scrum-fun\\Dal\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\79373\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -171,34 +183,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj": {
+    "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj",
+        "projectUniqueName": "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\79373\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Logic\\obj\\",
+        "projectPath": "D:\\git\\Rider\\Scrum-fun\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\Rider\\Scrum-fun\\Logic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\79373\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj": {
-                "projectPath": "C:\\Users\\79373\\OneDrive\\Рабочий стол\\USSC-project-main\\USSC\\Scrum-fun\\Dal\\Dal.csproj"
+              "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj": {
+                "projectPath": "D:\\git\\Rider\\Scrum-fun\\Dal\\Dal.csproj"
               }
             }
           }
@@ -251,7 +269,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

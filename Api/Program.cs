@@ -1,9 +1,5 @@
 using Api.Controllers.Internal.Modes.Mapping;
 using Dal;
-using Logic.Managers.Exercise;
-using Logic.Managers.Exercise.Interfaces;
-using Logic.Managers.Mode;
-using Logic.Managers.Mode.Interfaces;
 using Logic.Managers.Room;
 using Logic.Managers.Room.Interfaces;
 using Logic.Managers.User;
@@ -25,12 +21,6 @@ builder.Services.AddScoped<IUserManager, UserManager>();
 //комната
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IRoomManager, RoomManager>();
-//режим
-builder.Services.AddScoped<IModeRepository, ModeRepository>();
-builder.Services.AddScoped<IModeManager, ModeManager>();
-//задание
-builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
-builder.Services.AddScoped<IExerciseManager, ExerciseManager>();
 //автомаппер
 builder.Services.AddAutoMapper(typeof(CreateModeProfile));
 

@@ -1,5 +1,5 @@
 ﻿using Dal.Base;
-using Dal.Mode;
+using Dal.Enam;
 using Dal.User;
 
 namespace Dal.Room;
@@ -7,22 +7,16 @@ namespace Dal.Room;
 public class RoomDal: BaseDal<int>
 {
     public string Name { get; set; }
+    public string Modes { get; set; }
     
-    public int Password { get; set; }
+    public int GroupCount { get; set; }
     
-    public List<ModeDal> Modes { get; set; }
+    public Status Status { get; set; }
 
     public List<UserDal> Users { get; set; }
 
     public RoomDal()
     {
         
-    }
-    public RoomDal(string name, int password)
-    {
-        Name = name;
-        Password = password;
-        Modes = new List<ModeDal>();
-        Users = new List<UserDal>();
     }
 }

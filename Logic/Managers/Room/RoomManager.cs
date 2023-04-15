@@ -11,14 +11,14 @@ public class RoomManager: BaseManager<RoomDal, int>, IRoomManager
     {
     }
 
-    public int GeneratePassword()
-    {
-        var rnd = new Random();
-        while (true)
-        {
-            var password = rnd.Next(1000, 9999);
-            if (Repository.GetAll().Where(x => x.Password == password).ToList().Count == 0)
-                return password;
-        }
-    }
+    // public int GeneratePassword()
+    // {
+    //     var rnd = new Random();
+    //     while (true)
+    //     {
+    //         var password = rnd.Next(1000, 9999);
+    //         if (Repository.GetAll().Where(x => x.Password == password).ToList().Count == 0)
+    //             return password;
+    //     }
+    // }
 }
