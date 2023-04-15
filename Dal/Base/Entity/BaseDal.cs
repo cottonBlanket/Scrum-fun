@@ -4,7 +4,7 @@
 /// Оссновная сущность, все остальные наследуются от нее
 /// </summary>
 /// <typeparam name="T">Тип Id - int or guid</typeparam>
-public class BaseDal<T> 
+public abstract class BaseDal<T> 
 {
     /// <summary>
     /// Идентификатор строки в таблице

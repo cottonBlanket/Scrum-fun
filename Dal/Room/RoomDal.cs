@@ -4,7 +4,7 @@ using Dal.User;
 
 namespace Dal.Room;
 
-public class RoomDal: BaseDal<Guid>
+public class RoomDal: BaseDal<int>
 {
     public string Name { get; set; }
     
@@ -14,6 +14,10 @@ public class RoomDal: BaseDal<Guid>
 
     public List<UserDal> Users { get; set; }
 
+    public RoomDal()
+    {
+        
+    }
     public RoomDal(string name, int password)
     {
         Name = name;
