@@ -62,24 +62,21 @@ namespace Dal.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("RoomDalId")
-                        .HasColumnType("uuid");
-
                     b.Property<int>("Time")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("RoomDalId");
 
                     b.ToTable("Mode");
                 });
 
             modelBuilder.Entity("Dal.Room.RoomDal", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -107,8 +104,8 @@ namespace Dal.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("RoomDalId")
-                        .HasColumnType("uuid");
+                    b.Property<int?>("RoomDalId")
+                        .HasColumnType("integer");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("integer");
@@ -118,6 +115,21 @@ namespace Dal.Migrations
                     b.HasIndex("RoomDalId");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("ModeDalRoomDal", b =>
+                {
+                    b.Property<int>("ModesId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RoomsId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ModesId", "RoomsId");
+
+                    b.HasIndex("RoomsId");
+
+                    b.ToTable("ModeDalRoomDal");
                 });
 
             modelBuilder.Entity("Dal.Exercise.ExerciseDal", b =>
@@ -131,18 +143,26 @@ namespace Dal.Migrations
                     b.Navigation("Mode");
                 });
 
-            modelBuilder.Entity("Dal.Mode.ModeDal", b =>
-                {
-                    b.HasOne("Dal.Room.RoomDal", null)
-                        .WithMany("Modes")
-                        .HasForeignKey("RoomDalId");
-                });
-
             modelBuilder.Entity("Dal.User.UserDal", b =>
                 {
                     b.HasOne("Dal.Room.RoomDal", null)
                         .WithMany("Users")
                         .HasForeignKey("RoomDalId");
+                });
+
+            modelBuilder.Entity("ModeDalRoomDal", b =>
+                {
+                    b.HasOne("Dal.Mode.ModeDal", null)
+                        .WithMany()
+                        .HasForeignKey("ModesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Dal.Room.RoomDal", null)
+                        .WithMany()
+                        .HasForeignKey("RoomsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Dal.Mode.ModeDal", b =>
@@ -152,8 +172,6 @@ namespace Dal.Migrations
 
             modelBuilder.Entity("Dal.Room.RoomDal", b =>
                 {
-                    b.Navigation("Modes");
-
                     b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
