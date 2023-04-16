@@ -5,5 +5,5 @@ namespace Logic.Managers.Room.Interfaces;
 
 public interface IRoomManager: IBaseRepository<RoomDal, string>
 {
-    public string GenerateId();
+    public Task SplitUsers(RoomDal room);
 }

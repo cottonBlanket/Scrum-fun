@@ -44,7 +44,7 @@ public class StartController: BasePublicController
         var user = new UserDal(model.UserName, room);
         var userId = await _userManager.InsertAsync(user);
         
-        return Ok(new InviteResponse(userId));
+        return Ok(new InviteResponse(userId, user.IsOwner));
     }
 
     [HttpGet("exit")]

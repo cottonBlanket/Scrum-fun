@@ -1,25 +1,14 @@
 ﻿using Dal.Base.Interface;
 using Dal.Group;
+using Dal.Group.Repository.Interface;
 using Logic.Managers.Base;
-using Microsoft.AspNetCore.SignalR;
+using Logic.Managers.Group.Interface;
 
 namespace Logic.Managers.Group;
 
 public class GroupManager : BaseManager<GroupDal, int>, IGroupManager
 {
-    public GroupManager(IBaseRepository<GroupDal, int> repository) : base(repository)
+    public GroupManager(IGroupRepository repository) : base(repository)
     {
-    }
-
-    public Task AddToGroupAsync(string connectionId, string groupName,
-        CancellationToken cancellationToken = new CancellationToken())
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task RemoveFromGroupAsync(string connectionId, string groupName,
-        CancellationToken cancellationToken = new CancellationToken())
-    {
-        throw new NotImplementedException();
     }
 }

@@ -34,4 +34,10 @@ public class MusicController : BasePublicController
       var fileStream = new FileStream(Path.Combine(path, "record.mp3"), FileMode.Open);
       return File(fileStream, fileType, "record.mp3");
    }
+
+   [HttpGet("{userId}")]
+   public async Task<IActionResult> GetWords([FromRoute] Guid userId)
+   {
+      return Ok();
+   }
 }

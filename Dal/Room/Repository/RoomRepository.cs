@@ -15,7 +15,6 @@ public class RoomRepository : BaseRepository<RoomDal, string>, IRoomRepository
 
     public override Task<RoomDal?> GetAsync(string id)
     {
-        return _dbSet.Include(x => x.Users)
-            .Include(x => x.Modes).FirstOrDefaultAsync(x => x.Id == id);
+        return _dbSet.Include(x => x.Users).FirstOrDefaultAsync(x => x.Id == id);
     }
 }

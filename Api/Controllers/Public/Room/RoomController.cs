@@ -1,6 +1,7 @@
 ﻿using Api.Controllers.Base;
 using Api.Controllers.Public.Room.dto.response;
 using AutoMapper;
+using Dal.Enam;
 using Dal.User;
 using Logic.Managers.Room.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -32,6 +33,8 @@ public class RoomController: BasePublicController
     {
         var room = await _roomManager.GetAsync(roomId);
         room.NextStatus();
+        if (room.GroupCount != 0 && room.Status == Status.Pictures)
+            await _roomManager.SplitUsers(room);
         await _roomManager.UpdateAsync(room);
         return Ok();
     }
@@ -40,12 +43,9 @@ public class RoomController: BasePublicController
     public async Task<IActionResult> GetRoom([FromRoute] string roomId)
     {
         var room = await _roomManager.GetAsync(roomId);
-
-        /*var user = _mapper.Map<UserDal>(new UserResponse(room.Users.));
-        
-        var result = new GetListUsersInRoomResponse(room.Name, )*/
-
-        return Ok();
+        var users = room.Users.Select(x => _mapper.Map<UserResponse>(x)).ToList();
+        var result = new RoomResponse(room.Name, users);
+        return Ok(result);
     }
     
     

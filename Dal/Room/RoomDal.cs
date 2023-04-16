@@ -31,11 +31,11 @@ public class RoomDal: BaseDal<string>
         buider.Append("1 2 ");
         foreach (var e in modesArray)
         {
-            if (e == "Music")
+            if (e == "music")
             {
                 buider.Append("3 4 ");
             }
-            else if(e == "Quote")
+            else if(e == "quote")
             {
                 buider.Append("5 6 ");
             }
