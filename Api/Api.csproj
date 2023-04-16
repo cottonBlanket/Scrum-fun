@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.1" />
       <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
         <PrivateAssets>all</PrivateAssets>
@@ -22,7 +23,6 @@
     <ItemGroup>
       <Folder Include="Controllers\Internal" />
       <Folder Include="Controllers\Public\Music\dto\Response" />
-      <Folder Include="Controllers\Public\Pictures\dto\response" />
       <Folder Include="Controllers\Public\Quotes\mapping" />
       <Folder Include="Controllers\Public\Room\dto\request" />
       <Folder Include="Controllers\Public\Start\dto\response" />

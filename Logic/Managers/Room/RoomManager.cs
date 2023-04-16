@@ -1,6 +1,7 @@
 ﻿using System.Data.SqlTypes;
 using Dal.Group;
 using Dal.Group.Repository.Interface;
+using Dal.Photo;
 using Dal.Room;
 using Logic.Managers.Base;
 using Logic.Managers.Group.Interface;

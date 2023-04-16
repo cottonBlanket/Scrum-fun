@@ -1,4 +1,5 @@
 ﻿using Dal.Base.Interface;
+using Dal.Photo;
 using Dal.Room;
 
 namespace Logic.Managers.Room.Interfaces;

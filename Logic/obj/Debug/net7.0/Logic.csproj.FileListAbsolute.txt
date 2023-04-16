@@ -90,3 +90,7 @@ D:\git\Rider\Scrum-fun\Logic\obj\Debug\net7.0\refint\Logic.dll
 D:\git\Rider\Scrum-fun\Logic\obj\Debug\net7.0\Logic.pdb
 D:\git\Rider\Scrum-fun\Logic\obj\Debug\net7.0\Logic.genruntimeconfig.cache
 D:\git\Rider\Scrum-fun\Logic\obj\Debug\net7.0\ref\Logic.dll
+D:\git\Rider\Scrum-fun\Logic\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\git\Rider\Scrum-fun\Logic\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\git\Rider\Scrum-fun\Logic\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\git\Rider\Scrum-fun\Logic\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

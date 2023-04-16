@@ -110,3 +110,6 @@ D:\git\Rider\Scrum-fun\Api\obj\Debug\net7.0\refint\Api.dll
 D:\git\Rider\Scrum-fun\Api\obj\Debug\net7.0\Api.pdb
 D:\git\Rider\Scrum-fun\Api\obj\Debug\net7.0\Api.genruntimeconfig.cache
 D:\git\Rider\Scrum-fun\Api\obj\Debug\net7.0\ref\Api.dll
+D:\git\Rider\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\git\Rider\Scrum-fun\Api\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\git\Rider\Scrum-fun\Api\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

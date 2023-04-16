@@ -10,6 +10,10 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.Use(async (context, next) =>
+{
+    await next();
+    context.Response.Headers["ContentType"] = "aaplication/json";
+});
 
 app.Run();

@@ -1,7 +1,9 @@
 ﻿using System.Text;
 using Dal.Base;
 using Dal.Enam;
+using Dal.Photo;
 using Dal.User;
+using Microsoft.Extensions.FileProviders.Physical;
 
 namespace Dal.Room;
 
@@ -15,6 +17,8 @@ public class RoomDal: BaseDal<string>
     public Status Status { get; set; }
 
     public List<UserDal> Users { get; set; }
+    
+    public List<PhotoDal> Photos { get; set; }
 
     public RoomDal()
     {
@@ -45,6 +49,7 @@ public class RoomDal: BaseDal<string>
         Modes = buider.ToString();
         Status = Status.Waiting;
         Users = new List<UserDal>();
+        Photos = new List<PhotoDal>();
     }
 
     public void NextStatus()

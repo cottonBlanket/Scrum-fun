@@ -78,3 +78,7 @@ D:\git\Rider\Scrum-fun\Dal\obj\Debug\net7.0\refint\Dal.dll
 D:\git\Rider\Scrum-fun\Dal\obj\Debug\net7.0\Dal.pdb
 D:\git\Rider\Scrum-fun\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 D:\git\Rider\Scrum-fun\Dal\obj\Debug\net7.0\ref\Dal.dll
+D:\git\Rider\Scrum-fun\Dal\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\git\Rider\Scrum-fun\Dal\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\git\Rider\Scrum-fun\Dal\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\git\Rider\Scrum-fun\Dal\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

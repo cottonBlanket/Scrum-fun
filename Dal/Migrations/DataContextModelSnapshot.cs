@@ -39,6 +39,30 @@ namespace Dal.Migrations
                     b.ToTable("Group");
                 });
 
+            modelBuilder.Entity("Dal.Photo.PhotoDal", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("File")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RoomId")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("Photo");
+                });
+
             modelBuilder.Entity("Dal.Room.RoomDal", b =>
                 {
                     b.Property<string>("Id")
@@ -95,6 +119,15 @@ namespace Dal.Migrations
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("Dal.Photo.PhotoDal", b =>
+                {
+                    b.HasOne("Dal.Room.RoomDal", "Room")
+                        .WithMany("Photos")
+                        .HasForeignKey("RoomId");
+
+                    b.Navigation("Room");
+                });
+
             modelBuilder.Entity("Dal.User.UserDal", b =>
                 {
                     b.HasOne("Dal.Group.GroupDal", "Group")
@@ -119,6 +152,8 @@ namespace Dal.Migrations
 
             modelBuilder.Entity("Dal.Room.RoomDal", b =>
                 {
+                    b.Navigation("Photos");
+
                     b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
