@@ -3,6 +3,7 @@ using Dal.Group;
 using Dal.Group.Repository.Interface;
 using Dal.Photo;
 using Dal.Room;
+using Dal.User;
 using Logic.Managers.Base;
 using Logic.Managers.Group.Interface;
 using Logic.Managers.Room.Interfaces;
@@ -22,20 +23,39 @@ public class RoomManager: BaseManager<RoomDal, string>, IRoomManager
 
     public async Task SplitUsers(RoomDal room)
     {
-        var rnd = new Random();
         var users = room.Users;
-        var groups = new List<GroupDal>();
-        for (int i = 0; i < room.GroupCount; i++)
-        {
-            var group = new GroupDal(Quote.Quotes[rnd.Next(Quote.Quotes.Count)]);
-            var id = await _groupRepository.InsertAsync(group);
-            groups.Add(group);
-        }
-
+        var groups = await CreateGroups(room);
         for (int i = 0; i < users.Count; i++)
             users[i].Group = groups[i % room.GroupCount];
         
         //разделить цитаты
+    }
+
+    private void SplitQuote(List<GroupDal> groups, List<UserDal> users)
+    {
+        foreach (var group in groups)
+        {
+            var usersInGroup = users.Where(x => x.Group == group).ToList();
+            var quote = group.FullQuote.Split(' ');
+            var wordsCount = quote.Length / usersInGroup.Count;
+            // foreach (var u in usersInGroup)
+            // {
+            //     u
+            // }
+        }
+    }
+
+    private async Task<List<GroupDal>> CreateGroups(RoomDal room)
+    {
+        var groups = new List<GroupDal>();
+        for (int i = 0; i < room.GroupCount; i++)
+        {
+            var group = new GroupDal(Quote.GetRandomQuote());
+            var id = await _groupRepository.InsertAsync(group);
+            groups.Add(group);
+        }
+
+        return groups;
     }
 
     public void SplitUserWords(RoomDal room)

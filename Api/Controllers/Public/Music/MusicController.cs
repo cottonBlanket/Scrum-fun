@@ -16,7 +16,7 @@ public class MusicController : BasePublicController
       _userManager = userManager;
    }
    [HttpPost("send/{userId:guid}")]
-   public async Task<IActionResult> SendVoice([FromRoute]Guid userId, IFormFile file)
+   public async Task<IActionResult> SendVoice([FromRoute]Guid userId, [Bind("file")]IFormFile file)
    {
       var user = await _userManager.GetAsync(userId);
       await _userManager.UploadFileAsync(userId, user.Room.Id, file, user.QuotePiece[0].ToString());
