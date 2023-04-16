@@ -6,6 +6,7 @@ using Dal.Room;
 using Logic.Managers.Base;
 using Logic.Managers.Group.Interface;
 using Logic.Managers.Room.Interfaces;
+using Logic.Managers.Static.Music;
 using Logic.Managers.Static.Quote;
 
 
@@ -33,5 +34,21 @@ public class RoomManager: BaseManager<RoomDal, string>, IRoomManager
 
         for (int i = 0; i < users.Count; i++)
             users[i].Group = groups[i % room.GroupCount];
+    }
+
+    public Task SplitUserWords(RoomDal room)
+    {
+        var song = Songs.GetRandomSong();
+        var str = song.Text.Split("\n");
+        if (room.Users.Count > str.Length)
+        {
+            var count = str[0].Split(' ').Length / 2;
+            var words = str.SelectMany(s => s.Split(' ')).ToList();
+            foreach (var user in room.Users)
+            {
+                // user.QuotePiece = words.Take(count).Aggregate(x => );
+            }
+        }
+        return Task.CompletedTask;
     }
 }

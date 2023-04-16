@@ -7,4 +7,6 @@ namespace Logic.Managers.Room.Interfaces;
 public interface IRoomManager: IBaseRepository<RoomDal, string>
 {
     public Task SplitUsers(RoomDal room);
+
+    public Task SplitUserWords(RoomDal room);
 }
