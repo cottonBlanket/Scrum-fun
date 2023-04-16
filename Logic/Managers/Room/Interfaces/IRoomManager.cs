@@ -8,5 +8,5 @@ public interface IRoomManager: IBaseRepository<RoomDal, string>
 {
     public Task SplitUsers(RoomDal room);
 
-    public Task SplitUserWords(RoomDal room);
+    public void SplitUserWords(RoomDal room);
 }

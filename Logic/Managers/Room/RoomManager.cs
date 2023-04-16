@@ -36,19 +36,30 @@ public class RoomManager: BaseManager<RoomDal, string>, IRoomManager
             users[i].Group = groups[i % room.GroupCount];
     }
 
-    public Task SplitUserWords(RoomDal room)
+    public void SplitUserWords(RoomDal room)
     {
         var song = Songs.GetRandomSong();
         var str = song.Text.Split("\n");
+        var users = room.Users;
         if (room.Users.Count > str.Length)
         {
             var count = str[0].Split(' ').Length / 2;
             var words = str.SelectMany(s => s.Split(' ')).ToList();
-            foreach (var user in room.Users)
+            foreach (var user in users)
             {
-                // user.QuotePiece = words.Take(count).Aggregate(x => );
+                user.QuotePiece = String.Join ("', '", words.Take(count));
+                words.RemoveRange(0, count);
             }
         }
-        return Task.CompletedTask;
+        else
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+                users[i].QuotePiece = (i + 1).ToString() + ' ' + song.Name + ' ' + str[i];
+            }
+        }
+
+        room.Users = users;
+        Repository.UpdateAsync(room);
     }
 }

@@ -10,9 +10,9 @@ public class UserManager: BaseManager<UserDal, Guid>, IUserManager
     {
     }
 
-    public async Task UploadFileAsync(Guid userId, string roomId, IFormFile file)
+    public async Task UploadFileAsync(Guid userId, string roomId, IFormFile file, string fileName)
     {
-        var path = $"../Logic/Managers/Room/Files/{roomId}/{file.FileName}";
+        var path = $"../Logic/Managers/Room/Files/{roomId}/{fileName}.mp3";
         using (var fileStream = new FileStream(path, FileMode.Create))
         {
             await file.CopyToAsync(fileStream);

@@ -1,4 +1,5 @@
 ﻿using Api.Controllers.Base;
+using Api.Controllers.Public.Music.dto.response;
 using Logic.Managers.User.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,7 +19,7 @@ public class MusicController : BasePublicController
    public async Task<IActionResult> SendVoice([FromRoute]Guid userId, IFormFile file)
    {
       var user = await _userManager.GetAsync(userId);
-      await _userManager.UploadFileAsync(userId, user.Room.Id, file);
+      await _userManager.UploadFileAsync(userId, user.Room.Id, file, user.QuotePiece[0].ToString());
       return Ok();
    }
 
@@ -27,7 +28,7 @@ public class MusicController : BasePublicController
    {
       var path = $"../Logic/Managers/Room/Files/{roomId}";
       var directory = new DirectoryInfo(path);
-      var files = directory.GetFiles().Select(x => Path.Combine(x.DirectoryName, x.Name)).ToList();
+      var files = directory.GetFiles().OrderBy(x => int.Parse(x.Name.Split('.')[0])).Select(x => Path.Combine(x.DirectoryName, x.Name)).ToList();
       System.IO.File.WriteAllBytes(Path.Combine(path, "record.mp3"),
          files.SelectMany(x => System.IO.File.ReadAllBytes(x)).ToArray());
       var fileType = "application/octet-stream";
@@ -38,6 +39,8 @@ public class MusicController : BasePublicController
    [HttpGet("{userId}")]
    public async Task<IActionResult> GetWords([FromRoute] Guid userId)
    {
-      return Ok();
+      var user = await _userManager.GetAsync(userId);
+      var song = user.QuotePiece.Split(' ');
+      return Ok(new UserSongResponse(song[1], song[2]));
    }
 }
