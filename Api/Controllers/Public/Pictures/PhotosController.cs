@@ -38,7 +38,7 @@ public class PhotosController: BasePublicController
     {
         var room = await _roomManager.GetAsync(roomId);
         var photos = _photoManager.GetAllRoomPhotos(room).Select(x => _mapper.Map<PhotoResponse>(x)).ToList();
-        var isAll = room.Users.Count == photos.Count;
+        var isAll = room.Users.Count - 1 == photos.Count;
         return Ok(new RoomPhotosResponse(isAll, photos));
     }
 }
