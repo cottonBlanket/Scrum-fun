@@ -24,7 +24,7 @@ public class MusicController : BasePublicController
       return Ok();
    }
    
-   [HttpPost("sendd/{userId:guid}")]
+   [HttpPost("sendd")]
    public async Task<IActionResult> SenddVoice([FromBody]SenddRequest request)
    {
       var user = await _userManager.GetAsync(request.UserId);
