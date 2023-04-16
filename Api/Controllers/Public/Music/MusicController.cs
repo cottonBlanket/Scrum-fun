@@ -1,4 +1,5 @@
 ﻿using Api.Controllers.Base;
+using Api.Controllers.Public.Music.dto;
 using Api.Controllers.Public.Music.dto.response;
 using Logic.Managers.User.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,20 @@ public class MusicController : BasePublicController
    {
       _userManager = userManager;
    }
-   [HttpPost("send")]
-   public void SendVoice(IFormFile file, Guid userId)
+   [HttpPost("send/{userId:guid}")]
+   public async Task<IActionResult> SendVoice(IFormFile file, [FromRoute]Guid userId)
    {
-      var user = _userManager.GetAsync(userId).Result;
-      _userManager.UploadFileAsync(userId, user.Room.Id, file, user.QuotePiece[0].ToString());
+      var user = await _userManager.GetAsync(userId);
+      await _userManager.UploadFileAsync(userId, user.Room.Id, file, user.QuotePiece[0].ToString());
+      return Ok();
+   }
+   
+   [HttpPost("sendd/{userId:guid}")]
+   public async Task<IActionResult> SenddVoice([FromBody]SenddRequest request)
+   {
+      var user = await _userManager.GetAsync(request.UserId);
+      _userManager.UploadBase64Async(request.UserId, user.Room.Id, request.File, user.QuotePiece[0].ToString());
+      return Ok();
    }
 
    [HttpGet("record/{roomId}")]

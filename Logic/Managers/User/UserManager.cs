@@ -18,4 +18,11 @@ public class UserManager: BaseManager<UserDal, Guid>, IUserManager
             await file.CopyToAsync(fileStream);
         }
     }
+
+    public void UploadBase64Async(Guid userId, string roomId, string file, string fileName)
+    {
+        var path = $"../Logic/Managers/Room/Files/{roomId}/";
+        var bytes = Convert.FromBase64String(file);
+        File.WriteAllBytes(Path.Combine(path, "record.mp3"), bytes);
+    }
 }
