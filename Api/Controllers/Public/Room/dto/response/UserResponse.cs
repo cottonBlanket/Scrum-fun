@@ -28,4 +28,9 @@ public class UserResponse
         this.isOwner = isOwner;
         Group = group;
     }
+
+    public UserResponse()
+    {
+        
+    }
 }
