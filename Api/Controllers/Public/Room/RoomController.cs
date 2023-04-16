@@ -35,8 +35,9 @@ public class RoomController: BasePublicController
         room.NextStatus();
         if (room.GroupCount != 0 && room.Status == Status.Pictures)
             await _roomManager.SplitUsers(room);
-        if (room.Status == Status.Music)
+        else if (room.Status == Status.Music)
             _roomManager.SplitUserWords(room);
+        
         await _roomManager.UpdateAsync(room);
         return Ok();
     }

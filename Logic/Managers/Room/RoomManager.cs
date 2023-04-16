@@ -34,6 +34,8 @@ public class RoomManager: BaseManager<RoomDal, string>, IRoomManager
 
         for (int i = 0; i < users.Count; i++)
             users[i].Group = groups[i % room.GroupCount];
+        
+        //разделить цитаты
     }
 
     public void SplitUserWords(RoomDal room)

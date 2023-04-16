@@ -50,6 +50,9 @@ public class StartController: BasePublicController
     [HttpDelete("exit/{userId:guid}")]
     public async Task<IActionResult> Exit([FromRoute] Guid userId)
     {
+        var user = await _userManager.GetAsync(userId);
+        if (user.IsOwner)
+            await _roomManager.DeleteAsync(user.Room.Id);
         await _userManager.DeleteAsync(userId);
         return Ok();
     }
