@@ -22,6 +22,7 @@
     <ItemGroup>
       <Folder Include="Controllers\Internal" />
       <Folder Include="Controllers\Public\Music\dto\Response" />
+      <Folder Include="Controllers\Public\Pictures\dto\response" />
       <Folder Include="Controllers\Public\Quotes\mapping" />
       <Folder Include="Controllers\Public\Room\dto\request" />
       <Folder Include="Controllers\Public\Start\dto\response" />

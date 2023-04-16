@@ -1,4 +1,5 @@
 ﻿using Dal.Group;
+using Dal.Photo;
 using Dal.Room;
 using Dal.User;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +11,9 @@ public class DataContext: DbContext
     public DbSet<UserDal> User { get; set; }
     public DbSet<RoomDal> Room { get; set; }
     public DbSet<GroupDal> Group { get; set; }
-    
-    
-    
+    public DbSet<PhotoDal> Photo { get; set; }
+
+
     public DataContext(DbContextOptions<DataContext> options)
         : base(options)
     {

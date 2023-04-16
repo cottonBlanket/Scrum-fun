@@ -47,8 +47,8 @@ public class StartController: BasePublicController
         return Ok(new InviteResponse(userId, user.IsOwner));
     }
 
-    [HttpGet("exit")]
-    public async Task<IActionResult> Exit([FromHeader] Guid UserId)
+    [HttpGet("exit/{UserId:guid}")]
+    public async Task<IActionResult> Exit([FromRoute] Guid UserId)
     {
         await _userManager.DeleteAsync(UserId);
         return Ok();

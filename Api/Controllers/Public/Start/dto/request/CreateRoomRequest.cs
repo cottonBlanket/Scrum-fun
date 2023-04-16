@@ -8,17 +8,17 @@ public class CreateRoomRequest
 {
     [Required]
     [JsonProperty("UserName")]
-    public required string UserName { get; init; }
+    public string UserName { get; init; }
     
     [Required]
     [JsonProperty("Name")]
-    public required string Name { get; init; }
+    public string Name { get; init; }
     
     [Required]
     [JsonProperty("GroupCount")]
-    public required int GroupCount { get; init; }
+    public int GroupCount { get; init; }
     
     [Required]
     [JsonProperty("Modes")]
-    public required string Modes { get; init; }
+    public string Modes { get; init; }
 }

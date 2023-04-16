@@ -7,5 +7,5 @@ public class UserMusicRequest
 {
     [Required]
     [JsonProperty("UserId")]
-    public required Guid UserId { get; set; }
+    public Guid UserId { get; set; }
 }
