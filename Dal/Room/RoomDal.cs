@@ -54,9 +54,11 @@ public class RoomDal: BaseDal<string>
 
     public void NextStatus()
     {
-        var statuses = Modes.Split(' ').Select(int.Parse).ToList();
-        var cur = statuses.IndexOf((int)Status);
-        Status = (Status)statuses[cur + 1];
+        var a = Modes.IndexOf(((int)Status).ToString());
+        Status = (Status)Modes[a + 2];
+        // var statuses = Modes.Split(' ').Select(int.Parse).ToList();
+        // var cur = statuses.IndexOf((int)Status);
+        // Status = (Status)statuses[cur + 1];
     }
     
     public string GetRandomString()
