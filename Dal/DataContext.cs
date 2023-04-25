@@ -1,5 +1,5 @@
-﻿using Dal.Exercise;
-using Dal.Mode;
+﻿using Dal.Group;
+using Dal.Photo;
 using Dal.Room;
 using Dal.User;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +10,10 @@ public class DataContext: DbContext
 {
     public DbSet<UserDal> User { get; set; }
     public DbSet<RoomDal> Room { get; set; }
-    public DbSet<ModeDal> Mode { get; set; }
-    public DbSet<ExerciseDal> Exercise { get; set; }
-    
+    public DbSet<GroupDal> Group { get; set; }
+    public DbSet<PhotoDal> Photo { get; set; }
+
+
     public DataContext(DbContextOptions<DataContext> options)
         : base(options)
     {

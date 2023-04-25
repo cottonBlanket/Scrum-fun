@@ -2,13 +2,18 @@ using Dal;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-app.MapGet("/", () => "Hello World!");
+var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    await next();
+    context.Response.Headers["ContentType"] = "aaplication/json";
+});
 
 app.Run();
